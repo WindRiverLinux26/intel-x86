@@ -46,7 +46,6 @@ XSERVER ?= "xserver-xorg \
 	   xserver-xorg-extension-extmod \
 	   xserver-xorg-extension-dbe \
 	   xserver-xorg-module-libint10 \
-	   xf86-input-mouse \
 	   xf86-input-evdev \
 	   xf86-input-synaptics \
 	   xf86-video-vesa \
