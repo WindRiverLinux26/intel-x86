@@ -76,7 +76,7 @@ TARGET_QEMU_BOOT_CONSOLE = "ttyS0,115200"
 TARGET_QEMU_OPTS = "-show-cursor -usb -usbdevice wacom-tablet -vga vmware"
 TARGET_QEMU_CPU = "Nehalem"
 
-IMAGE_FSTYPES += "live wic wic.bmap"
+IMAGE_FSTYPES += "live wic wic.bmap ext4.zst"
 
 WKS_FILE ?= "${@bb.utils.contains('INCOMPATIBLE_LICENSE', 'GPL-3.0-only', 'systemd-bootdisk.wks', 'intel-x86-mkefidisk.wks', d)}"
 do_image_wic[depends] += "gptfdisk-native:do_populate_sysroot"
