@@ -107,7 +107,15 @@ The following features are not supported or validated:
 	x High Speed Custom Solutions connector
 	x internal 9pin UART header
 
-3.1.4 Known Issues
+3.1.4 Notes
+~~~~~~~~~~~
+
+1) The default console is ttyS0. If you want to use ttyUSB0 as another console,
+   add "console=ttyUSB0,115200" to the kernel command line.
+   After the system boots, run "systemctl start serial-getty@ttyUSB0.service"
+   to enable login on this console.
+
+3.1.5 Known Issues
 ~~~~~~~~~~~~~~~~~~
 
 1) boot error: thermal thermal_zone3: failed to read out thermal zone
