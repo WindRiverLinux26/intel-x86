@@ -1,5 +1,0 @@
-IMAGE_INSTALL += "iucode-tool"
-IMAGE_INSTALL += "intel-microcode"
-IMAGE_INSTALL += "i2c-tools"
-IMAGE_INSTALL += "lmsensors"
-IMAGE_INSTALL += "${@bb.utils.contains('INCOMPATIBLE_LICENSE', 'GPL-3.0-only', 'systemd-boot', 'grub-efi', d)}"
