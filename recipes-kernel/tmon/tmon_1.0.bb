@@ -12,6 +12,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=e6a75371ba4d16749254a51215d13f97"
 PR = "r0"
 
 COMPATIBLE_HOST = '(x86_64.*|i.86.*)-linux'
+COMPATIBLE_MACHINE:pn-tmon = "intel-x86-64"
 
 DEPENDS = "virtual/kernel ncurses"
 
