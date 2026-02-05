@@ -62,8 +62,8 @@ PREFERRED_PROVIDER_libglu = "libglu"
 PREFERRED_VERSION_virtual/mesa = "17.1.5"
 
 PREFERRED_PROVIDER_virtual/kernel ??= "linux-yocto"
-PREFERRED_VERSION_linux-yocto ?= "6.12%"
-PREFERRED_VERSION_linux-yocto-rt ?= "6.12%"
+PREFERRED_VERSION_linux-yocto ?= "6.18%"
+PREFERRED_VERSION_linux-yocto-rt ?= "6.18%"
 
 TUNE_CCARGS:remove:pn-syslinux = "-mfpmath=sse -msse4.2"
 TUNE_CCARGS:pn-lib32-gtk4 = "${@bb.utils.contains('TUNE_FEATURES', 'corei7', ' -march=nehalem -mtune=generic -mno-sse', '', d)}"
