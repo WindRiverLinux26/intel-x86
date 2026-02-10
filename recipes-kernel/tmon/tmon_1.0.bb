@@ -7,7 +7,7 @@ DESCRIPTION = "TMON is conceived as a tool to help visualize, tune, and \
 test the complex thermal subsystem"
 
 LICENSE = "GPL-2.0-only"
-LIC_FILES_CHKSUM = "file://COPYING;md5=e6a75371ba4d16749254a51215d13f97"
+LIC_FILES_CHKSUM = "file://COPYING;md5=a362c03f8df4e23f8a155e1cb2c45b2a"
 
 PR = "r0"
 
