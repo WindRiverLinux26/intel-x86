@@ -15,3 +15,6 @@ TARGET_SUPPORTED_KTYPES:intel-x86 = "standard preempt-rt"
 KERNEL_VERSION_SANITY_SKIP = "1"
 SRCREV_machine:intel-x86 ?= "${AUTOREV}"
 SRCREV_meta:intel-x86 ?= "${AUTOREV}"
+
+# Set the maximum supported CPU count to 512
+KERNEL_FEATURES:append:intel-x86-64 = "cfg/cpu_nr_512.scc"
