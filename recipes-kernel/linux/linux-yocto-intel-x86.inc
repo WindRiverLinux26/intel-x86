@@ -17,4 +17,4 @@ SRCREV_machine:intel-x86 ?= "${AUTOREV}"
 SRCREV_meta:intel-x86 ?= "${AUTOREV}"
 
 # Set the maximum supported CPU count to 512
-KERNEL_FEATURES:append:intel-x86-64 = "cfg/cpu_nr_512.scc"
+KERNEL_FEATURES:append:intel-x86-64 = " cfg/cpu_nr_512.scc"
