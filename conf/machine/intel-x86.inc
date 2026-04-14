@@ -28,7 +28,7 @@ MACHINE_EXTRA_RRECOMMENDS += "linux-firmware-ibt-misc"
 
 EFI_PROVIDER ?= "${@bb.utils.contains('INCOMPATIBLE_LICENSE', 'GPL-3.0-only', 'systemd-boot', 'grub-efi', d)}"
 
-# grub-efi is depended in wic.bbclass, remove it to aviod depency error.
+# grub-efi is a dependency in wic.bbclass, remove it to avoid dependency error.
 WKS_FILE_DEPENDS_BOOTLOADERS:remove = "${@bb.utils.contains('INCOMPATIBLE_LICENSE', 'GPL-3.0-only', 'grub-efi', '', d)}"
 
 # Do not include installer routine when GPL-3.0-only is not allowed.
