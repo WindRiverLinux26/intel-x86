@@ -68,14 +68,6 @@ PREFERRED_VERSION_linux-yocto-rt ?= "6.18%"
 TUNE_CCARGS:remove:pn-syslinux = "-mfpmath=sse -msse4.2"
 TUNE_CCARGS:pn-lib32-gtk4 = "${@bb.utils.contains('TUNE_FEATURES', 'corei7', ' -march=nehalem -mtune=generic -mno-sse', '', d)}"
 
-TARGET_QEMU_BIN = "qemu-system-x86_64"
-TARGET_QEMU_KERNEL = "bzImage"
-TARGET_QEMU_KERNEL_OPTS = "selinux=0 enforcing=0"
-TARGET_QEMU_ENET_MODEL = "i82557b"
-TARGET_QEMU_BOOT_CONSOLE = "ttyS0,115200"
-TARGET_QEMU_OPTS = "-show-cursor -usb -usbdevice wacom-tablet -vga vmware"
-TARGET_QEMU_CPU = "Nehalem"
-
 IMAGE_FSTYPES += "live wic wic.bmap ext4.zst"
 
 WKS_FILE ?= "${@bb.utils.contains('INCOMPATIBLE_LICENSE', 'GPL-3.0-only', 'systemd-bootdisk.wks', 'intel-x86-mkefidisk.wks', d)}"
