@@ -1,6 +1,3 @@
-#
-# Copyright (C) 2017 Wind River Systems, Inc.
-#
 SUMMARY = "A Monitoring and Testing Tool for Linux kernel thermal subsystem"
 
 DESCRIPTION = "TMON is conceived as a tool to help visualize, tune, and \

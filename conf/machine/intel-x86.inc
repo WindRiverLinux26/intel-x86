@@ -1,7 +1,3 @@
-#
-# Copyright (C) 2017 Wind River Systems, Inc.
-#
-
 MACHINE_FEATURES += "x86 pci usbhost ext2 keyboard screen alsa acpi vfat serial"
 MACHINE_FEATURES += "efi pcbios"
 MACHINE_FEATURES += "parser shell-tools filesystem profile network"
