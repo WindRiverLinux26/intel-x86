@@ -88,7 +88,7 @@ Note: The preempt-rt kernel type can be used with this BSP/Machine.
 To get a list of patches applied to the kernel specific to this BSP along with
 patch descriptions use git-whatchanged on the default kernel. For example:
 
-	%> cd tmp-glibc/work-shared/<bsp_name>/kernel-source
+	%> cd tmp/work-shared/<bsp_name>/kernel-source
 	%> git whatchanged <kernel_version>/standard/base..<kernel_version>/standard/<bsp_name>
 
 4. Boot Instructions
@@ -279,7 +279,7 @@ use grub-efi as bootloader.
 
 The way to get the ISO image is to add IMAGE_FSTYPES += "iso" to conf/local.conf
 "echo 'IMAGE_FSTYPES += "iso"' >> conf/local.conf", and then bitbake rootfs, after that, you can access the ISO image in
-<project_dir>/tmp-glibc/deploy/images/ directory.
+<project_dir>/tmp/deploy/images/ directory.
 
 After you get the ISO image, you can burn it onto an optical disk or "dd" it onto a flash
 disk to boot on your board just as the USB image does.
@@ -288,8 +288,8 @@ disk to boot on your board just as the USB image does.
 -----------------
 
 To get a HDD image, you must add  "IMAGE_FSTYPES += "hddimg"" to conf/local.conf.
-After that, build rootfs with bitbake, you will get it under tmp-glibc/deploy/images/<bsp name>/  directory,such as:
-tmp-glibc/deploy/images/intel-x86-64/intel-x86-64-wrlinux-image-glibc-std-standard-dist.hddimg.
+After that, build rootfs with bitbake, you will get it under tmp/deploy/images/<bsp name>/  directory,such as:
+tmp/deploy/images/intel-x86-64/intel-x86-64-wrlinux-image-glibc-std-standard-dist.hddimg.
 
 The method of deploying this image is the same as USB image does.
 
@@ -1255,9 +1255,9 @@ https://docs.yoctoproject.org/singleindex.html#creating-partitioned-images-using
 This BSP supports EFI and legacy PCBIOS disk images for USB, HDD and SD card.
 The default wic image is an EFI disk image for USB and HDD.
 After build the project, user will get a WIC image under the directory
-tmp-glibc/deploy/images/<bsp name>/ ,such as:
+tmp/deploy/images/<bsp name>/ ,such as:
 
-tmp-glibc/deploy/images/intel-x86-64/wrlinux-image-glibc-small-intel-x86-64.wic.
+tmp/deploy/images/intel-x86-64/wrlinux-image-glibc-small-intel-x86-64.wic.
 
 Then user can write the output image to an USB or Hard disk:
 
