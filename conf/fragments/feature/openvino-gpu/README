@@ -1,0 +1,14 @@
+This feature enables the OpenVINO GPU plugin on Intel x86 platforms.
+It activates the meta-clang-revival layer and installs Intel compute
+runtime components (intel-graphics-compiler, intel-compute-runtime,
+gmmlib, level-zero) required for GPU-accelerated inference.
+
+This feature requires feature/openvino, see file "require".
+
+To use this feature, add
+
+    --templates feature/openvino-gpu
+
+#@TYPE: Wrtemplate
+#@NAME: openvino-gpu
+#@DESCRIPTION: Enable OpenVINO GPU plugin with Intel compute runtime on intel-x86 platforms.
